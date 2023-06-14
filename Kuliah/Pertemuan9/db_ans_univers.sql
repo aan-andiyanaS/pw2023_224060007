@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Jun 2023 pada 14.06
+-- Waktu pembuatan: 14 Jun 2023 pada 17.38
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -28,21 +28,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `ans` (
-  `Nama` varchar(25) DEFAULT NULL,
-  `NIM` int(11) DEFAULT NULL,
-  `Jurusan` varchar(15) DEFAULT NULL,
-  `Gambar` varchar(20) DEFAULT NULL
+  `ID` int(11) NOT NULL,
+  `Nama` varchar(30) NOT NULL,
+  `NIM` int(11) NOT NULL,
+  `Email` varchar(35) NOT NULL,
+  `Jurusan` varchar(20) NOT NULL,
+  `Gambar` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `ans`
 --
 
-INSERT INTO `ans` (`Nama`, `NIM`, `Jurusan`, `Gambar`) VALUES
-('Aan Andiyana Sandi', 24060007, 'Teknik Informat', 'IMG_9234.JPG'),
-('Aan Andiyana S.', 24060007, 'Teknik Informat', 'IMG_9234-YTpPGbmvd-t'),
-('Aan A. S,', 224060007, 'Teknik Informat', 'IMG_9234-PhotoRoom.p'),
-('ANS', 30005, 'Teknik', '20190707_073417.jpg');
+INSERT INTO `ans` (`ID`, `Nama`, `NIM`, `Email`, `Jurusan`, `Gambar`) VALUES
+(246060007, 'Aan Andiyana Sandi', 224060007, '224060007.mhs@stmikjabar.ac.id', 'Teknik Informatika', 'IMG_9234-1.JPG'),
+(224060008, 'Aan Andiyana S.', 224060008, '224060007.mhs@stmikjbr.ac.id', 'Teknik Informatika', 'IMG_9234-2.png'),
+(224060009, 'Aan A. S,', 224060009, '224060007.mhs@stmik_jbr.ac.id', 'Teknik Informatika', 'IMG_9234-3.png'),
+(30005, 'ANS', 30005, 'ans030005@gmail.com', 'Teknik', 'ANS-DAL-II.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
