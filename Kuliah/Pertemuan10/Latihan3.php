@@ -19,11 +19,7 @@ $ans = query("SELECT * FROM ans");
     <tr>
       <th>#</th>
       <th>Gambar</th>
-      <th>ID</th>
       <th>Nama</th>
-      <th>NIM</th>
-      <th>Email</th>
-      <th>Jurusan</th>
       <th>Aksi</th>
     </tr>
 
@@ -32,13 +28,9 @@ $ans = query("SELECT * FROM ans");
       <tr>
         <td><?= $i++; ?></td>
         <td><img src="image/<?= $a['Gambar']; ?>" height="60px"></td>
-        <td><?= $a['ID']; ?></td>
         <td><?= $a['Nama']; ?></td>
-        <td><?= $a['NIM']; ?></td>
-        <td><?= $a['Email']; ?></td>
-        <td><?= $a['Jurusan']; ?></td>
         <td>
-          <a href="">ubah</a> | <a href="">hapus</a>
+          <a href="detail.php?id=<?= $a['id']; ?>">Lihat Detail</a>
         </td>
       </tr>
     <?php endforeach; ?>

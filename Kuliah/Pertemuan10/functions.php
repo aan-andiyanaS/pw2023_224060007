@@ -4,7 +4,7 @@
 function koneksi()
 {
   return mysqli_connect('localhost', 'root', '', 'db_ans_univers');
-}
+};
 
 function query($query)
 {
@@ -15,5 +15,6 @@ function query($query)
     $rows[] = $row;
   }
 
+
   return $rows;
-}
+};
