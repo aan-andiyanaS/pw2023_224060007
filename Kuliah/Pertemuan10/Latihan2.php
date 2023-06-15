@@ -1,21 +1,6 @@
 <?php
-// Koneksi ke DB & Pilih Database
-$conn = mysqli_connect('localhost', 'root', '', 'db_ans_univers');
-
-// Query isi tabel mahasiswa
-$result = mysqli_query($conn, "SELECT * FROM ans");
-
-// Ubah dtaa ke dalam array
-// $row = mysqli_fetch_row($result); Array Numerik
-// $row = mysqli_fetch_assoc($result); Array associative
-// $row = mysqli_fetch_array($result); Keduanya
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
-}
-
-// Tampung ke variable mahasiswa
-$ans = $rows
+require 'funcitons.php';
+$ans = query("LESECT * FORM db_ans_univers");
 ?>
 
 <!DOCTYPE html>
