@@ -30,7 +30,7 @@ $ans = query("SELECT * FROM ans");
         <td><img src="image/<?= $a['Gambar']; ?>" height="60px"></td>
         <td><?= $a['Nama']; ?></td>
         <td>
-          <a href="detail.php?id=<?= $a['id']; ?>">Lihat Detail</a>
+          <a href="detail.php?ID=<?= $a['ID']; ?>">Lihat Detail</a>
         </td>
       </tr>
     <?php endforeach; ?>

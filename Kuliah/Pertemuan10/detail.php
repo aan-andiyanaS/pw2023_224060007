@@ -1,9 +1,9 @@
 <?php
 require 'functions.php';
 //  Ambil id dari URL
-$id = $_GET['id'];
-$ans = query("SELECT * FROM ans WHERE id = $id");
-var_dump($ans);
+$ID = $_GET['ID'];
+$a = query("SELECT * FROM ans WHERE ID = $ID");
+
 ?>
 
 
@@ -19,12 +19,13 @@ var_dump($ans);
 <body>
   <h3>Detail Mahasiswa</h3>
   <ul>
-    <li><img src="image/IMG_9234-1.JPG" height="60px"></li>
-    <li>NIM : 224060007</li>
-    <li>Nama : Aan Andiyana Sandi</li>
-    <li>Email : 224060007.mhs@stmikjabar.ac.id</li>
-    <li>Jurusan : Teknik Informatika</li>
-    <li><a href="">Ubah</a><a href="">Hapus</a></li>
+    <li><img src="image/<?= $a["Gambar"]; ?>" height="60px"></li>
+    <li>ID : <?= $a['ID']; ?></li>
+    <li>Nama : <?= $a['Nama']; ?></li>
+    <li>NIM : <?= $a['NIM']; ?></li>
+    <li>Email : <?= $a['Email']; ?></li>
+    <li>Jurusan : <?= $a['Jurusan']; ?></li>
+    <li><a href="">Ubah</a> | <a href="">Hapus</a></li>
     <li><a href="Latihan3.php">Kembali Ke daftar mahasiswa</a></li>
   </ul>
 </body>
